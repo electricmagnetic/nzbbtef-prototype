@@ -24,6 +24,11 @@ function App() {
           <NZBBTEFVisualise />
         </div>
       </main>
+      <footer className="bg-light py-5">
+        <div className="container">
+          <p>A project of <a href="https://electricmagnetic.net">ElectricMagnetic</a></p>
+        </div>
+      </footer>
     </div>
   );
 }
