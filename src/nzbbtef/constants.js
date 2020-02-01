@@ -34,7 +34,6 @@ const longColours = {
   'Purple': 'Pu',
   'Blue': 'B',
   'Green': 'G',
-  'Lime': 'LG',
   'Brown': 'Br',
 };
 
@@ -71,7 +70,6 @@ const longCombinedColours = {
   pink: 'P',
   purple: 'Pu',
   blue: 'B',
-  lime: 'LG',
   green: 'G',
   brown: 'Br',
 }
