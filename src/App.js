@@ -1,21 +1,31 @@
 import React from 'react';
 
+import NZBBTEFVisualise from './components/NZBBTEFVisualise';
+import logo from './assets/logo.svg';
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="bg-light py-5">
+        <div className="container">
+          <img src={logo} alt="NZBBTEF" className="mb-3" />
+          <h1>Prototype</h1>
+          <p className="lead">
+            New Zealand Bird Band Text Exchange Format
+          </p>
+          <p>
+            <ul className="list-unstyled">
+              <li><a href="https://gist.github.com/georgemoon/0c06e7ad0004ae9c47dd4ac0e1b425d5">Working Document</a></li>
+              <li><a href="https://github.com/electricmagnetic/nzbbtef-prototype">Prototype Repository</a></li>
+            </ul>
+          </p>
+        </div>
       </header>
+      <main>
+        <div className="container">
+          <NZBBTEFVisualise />
+        </div>
+      </main>
     </div>
   );
 }
