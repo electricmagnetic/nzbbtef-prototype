@@ -13,12 +13,10 @@ function App() {
           <p className="lead">
             New Zealand Bird Band Text Exchange Format
           </p>
-          <p>
-            <ul className="list-unstyled">
-              <li><a href="https://gist.github.com/georgemoon/0c06e7ad0004ae9c47dd4ac0e1b425d5">Working Document</a></li>
-              <li><a href="https://github.com/electricmagnetic/nzbbtef-prototype">Prototype Repository</a></li>
-            </ul>
-          </p>
+          <ul className="list-unstyled mb-0">
+            <li><a href="https://gist.github.com/georgemoon/0c06e7ad0004ae9c47dd4ac0e1b425d5">Working Document</a></li>
+            <li><a href="https://github.com/electricmagnetic/nzbbtef-prototype">Prototype Repository</a></li>
+          </ul>
         </div>
       </header>
       <main>

@@ -29,6 +29,15 @@ class NZBBTEFVisualise extends Component {
         </section>
         <section className="my-5">
           <h2>2. Colour Transformation</h2>
+          <p>
+            The first step is to convert long colour names into short colour names. This is so that
+            colours with two words (e.g. Dark Green) can be appropriately processed.
+          </p>
+          <h3>Assumptions</h3>
+          <ol>
+            <li>Colour names are case sensitive</li>
+            <li>Colour names will not feature elsewhere (e.g. as symbols or as inscriptions)</li>
+          </ol>
           <em>TODO</em>
         </section>
         <section className="my-5">
