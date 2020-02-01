@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c87975ee696e6793e4bd4e7faea5f373",
+    "revision": "b6ef313365caf19621d9f3d7ea45ca14",
     "url": "/nzbbtef-prototype/index.html"
   },
   {
-    "revision": "ba7dbe2d767fa0866263",
+    "revision": "1535f2a099f00991cdf2",
     "url": "/nzbbtef-prototype/static/css/main.7c1392f1.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nzbbtef-prototype/static/js/2.726b1607.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ba7dbe2d767fa0866263",
-    "url": "/nzbbtef-prototype/static/js/main.509dec57.chunk.js"
+    "revision": "1535f2a099f00991cdf2",
+    "url": "/nzbbtef-prototype/static/js/main.1842f381.chunk.js"
   },
   {
     "revision": "6593db7928a73e88af75",
