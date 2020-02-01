@@ -27,4 +27,4 @@ const TokenTable = ({ tokens }) => (
   </div>
 );
 
-export { TokenRow, TokenTable };
+export default TokenTable;
