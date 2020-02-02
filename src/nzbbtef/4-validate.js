@@ -1,46 +1,41 @@
 /**
   Helper function that counts the number of the given search term in the array specified
-  Input: array, search term
-  Output: number
  */
 const countInstancesInArray = (tokenTypes, search) =>
   tokenTypes.reduce((count, tokenType) => (tokenType.includes(search) ? (count += 1) : count), 0);
 
 /**
-  Helper function that compiles token types into a string that match a given search term
-  Input: tokens, search term
-  Output: string
+  Helper function that compile the separators as a string separated by spaces.
  */
-const compileTokenTypes = (tokens, search) =>
+const getSeparatorsAsString = tokens =>
   tokens
-    .reduce(
-      (combined, token) =>
-        token.type.includes(search) ? [combined, token.type].join(' ') : combined,
-      ''
-    )
+    .filter(token => token.type.includes('Separator'))
+    .map(separator => separator.type)
+    .join(' ')
     .trim();
 
 /**
   Only 0 to 1 legSeparators permissible
  */
 const validateLegSeparators = tokens => {
-  const compiledLegSeparators = compileTokenTypes(tokens, 'Separator');
-  const legSeparatorCount = countInstancesInArray(compiledLegSeparators.split(' '), 'legSeparator');
-
-  return legSeparatorCount <= 1;
+  const separatorsAsString = getSeparatorsAsString(tokens);
+  return countInstancesInArray(separatorsAsString.split(' '), 'legSeparator') <= 1;
 };
 
 /**
-  Only 0 to 1 partSeparators permissible per leg
+  Only 0 to 1 partSeparators permissible per leg.
+  Compiles the token types as a string, then does analysis between legSeparator and partSeparator.
  */
 const validatePartSeparators = tokens => {
-  const compiledSeparatorsByLeg = compileTokenTypes(tokens, 'Separator').split('legSeparator');
+  const separatorsAsString = getSeparatorsAsString(tokens);
 
-  return compiledSeparatorsByLeg.reduce(
-    (isValid, compiledSeparators) =>
-      countInstancesInArray(compiledSeparators.split(' '), 'partSeparator') <= 1 && isValid,
-    true
-  );
+  return separatorsAsString
+    .split('legSeparator')
+    .reduce(
+      (isValid, separatorSubsetAsString) =>
+        countInstancesInArray(separatorSubsetAsString.split(' '), 'partSeparator') <= 1 && isValid,
+      true
+    );
 };
 const validate = tokens => {
   const validators = {
