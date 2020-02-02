@@ -15,10 +15,15 @@ class Form extends Component {
     return (
       <form>
         <div className="form-group">
-          <label htmlFor="nzbbtef">
-            NZBBTEF
-          </label>
-          <input className="form-control" id="nzbbtef" type="text" name="nzbbtef" value={this.props.value} onChange={this.handleChange} />
+          <label htmlFor="nzbbtef">NZBBTEF</label>
+          <input
+            className="form-control"
+            id="nzbbtef"
+            type="text"
+            name="nzbbtef"
+            value={this.props.value}
+            onChange={this.handleChange}
+          />
         </div>
       </form>
     );

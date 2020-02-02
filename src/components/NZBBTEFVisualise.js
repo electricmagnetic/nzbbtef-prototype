@@ -18,7 +18,7 @@ class NZBBTEFVisualise extends Component {
   }
 
   handleNZBBTEFChange(nzbbtef) {
-    this.setState({nzbbtef: nzbbtef});
+    this.setState({ nzbbtef: nzbbtef });
   }
 
   render() {
@@ -31,25 +31,20 @@ class NZBBTEFVisualise extends Component {
         <section className="my-5">
           <h2>Input</h2>
           <p>Enter a band combo in NZBBTEF format.</p>
-          <InputForm
-            onFieldChange={this.handleNZBBTEFChange}
-            value={this.state.nzbbtef}
-          />
+          <InputForm onFieldChange={this.handleNZBBTEFChange} value={this.state.nzbbtef} />
         </section>
         <section className="my-5">
           <h2>1. Colour Transformation</h2>
           <p>
-            The first step is to convert long colour names into short colour names.<br />
+            The first step is to convert long colour names into short colour names.
+            <br />
             This is so that colours with one words (e.g. Dark Green) can be appropriately processed.
           </p>
           <div className="row">
             <div className="col-md-8 mb-3">
               <div className="card">
                 <div className="card-body">
-                  {one
-                    ? <samp>{one}</samp>
-                    : <span>No input specified</span>
-                  }
+                  {one ? <samp>{one}</samp> : <span>No input specified</span>}
                 </div>
               </div>
             </div>
@@ -57,7 +52,9 @@ class NZBBTEFVisualise extends Component {
               <ol>
                 <li>Colours can be written as one or one words (Pale Blue or PaleBlue)</li>
                 <li>Colour names are case insensitive</li>
-                <li>Colour names will not feature elsewhere (e.g. as symbols or as inscriptions)</li>
+                <li>
+                  Colour names will not feature elsewhere (e.g. as symbols or as inscriptions)
+                </li>
               </ol>
             </div>
           </div>
@@ -65,8 +62,8 @@ class NZBBTEFVisualise extends Component {
         <section className="my-5">
           <h2>2. Tokenisation</h2>
           <p>
-            The second step is to recognise the constituent parts in order to
-            figure out the structure of the band combo.
+            The second step is to recognise the constituent parts in order to figure out the
+            structure of the band combo.
           </p>
           <div className="row">
             <div className="col-md-8 mb-3">
@@ -82,18 +79,14 @@ class NZBBTEFVisualise extends Component {
             </div>
             <div className="col-md-4 small">
               <ol>
-                <li>
-                  ID bands without a colour will be designated as 'M' (metal)
-                </li>
+                <li>ID bands without a colour will be designated as 'M' (metal)</li>
               </ol>
             </div>
           </div>
         </section>
         <section className="my-5">
           <h2>3. Get Colours</h2>
-          <p>
-            Match up the 'short colour' values with the corresponding CSS value.
-          </p>
+          <p>Match up the 'short colour' values with the corresponding CSS value.</p>
           <div className="row">
             <div className="col-md-8 mb-3">
               <div className="card">
@@ -109,8 +102,8 @@ class NZBBTEFVisualise extends Component {
             <div className="col-md-4 small">
               <ol>
                 <li>
-                  As colours have been standardised to 'short colours', simple
-                  lookups can be done to get CSS values
+                  As colours have been standardised to 'short colours', simple lookups can be done
+                  to get CSS values
                 </li>
                 <li>Invalid colours will not return a colour value</li>
               </ol>

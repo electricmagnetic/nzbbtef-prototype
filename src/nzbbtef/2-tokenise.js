@@ -1,17 +1,17 @@
-import * as moo from "moo";
+import * as moo from 'moo';
 
 let symbolBandiser = moo.compile({
   symbol: { match: /\S+\son\s/, value: value => value.match(/\S+/)[0] },
   symbolColour: /^[a-zA-Z]+/,
   bandColour: /[a-zA-Z]+$/,
   WS: /[ \t]+/,
-  error: moo.error
+  error: moo.error,
 });
 
 let idBandiser = moo.compile({
   bandColour: /^[a-zA-Z]+/,
   inscription: { match: /\(\S+\)/, value: value => value.match(/[^()]+/)[0] },
-  error: moo.error
+  error: moo.error,
 });
 
 let tokeniser = moo.compile({
@@ -24,7 +24,7 @@ let tokeniser = moo.compile({
   nullBand: /x/,
   colouredBand: /[a-zA-Z]+/,
   WS: /[ \t]+/,
-  error: moo.error
+  error: moo.error,
 });
 
 /**
@@ -36,13 +36,13 @@ const tokenise = nzbbtef => {
   return Array.from(tokeniser).map(token => {
     // If nested token, initialise tokeniser
     switch (token.type) {
-      case "symbolBand":
+      case 'symbolBand':
         symbolBandiser.reset(token.value);
         break;
-      case "uncolouredIdBand":
+      case 'uncolouredIdBand':
         idBandiser.reset(`M${token.value}`);
         break;
-      case "colouredIdBand":
+      case 'colouredIdBand':
         idBandiser.reset(token.value);
         break;
       default:
@@ -51,19 +51,19 @@ const tokenise = nzbbtef => {
 
     // Depending on type, use tokeniser (as initialised) or otherwise just return the token as is
     switch (token.type) {
-      case "symbolBand":
+      case 'symbolBand':
         return Object.assign(
           {},
           token,
-          { type: "tokenisedSymbolBand" },
+          { type: 'tokenisedSymbolBand' },
           { tokenised: Array.from(symbolBandiser) }
         );
-      case "uncolouredIdBand":
-      case "colouredIdBand":
+      case 'uncolouredIdBand':
+      case 'colouredIdBand':
         return Object.assign(
           {},
           token,
-          { type: "tokenisedIdBand" },
+          { type: 'tokenisedIdBand' },
           { tokenised: Array.from(idBandiser) }
         );
       default:

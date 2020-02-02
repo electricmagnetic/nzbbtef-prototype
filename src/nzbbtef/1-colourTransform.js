@@ -5,14 +5,13 @@ import { longColours, longCombinedColours } from './colours/transforms';
  - Use of \b necessary to not transform PaleBlue to PaleB
  - Double backslash because string escaping necessary
  */
-const transform = (nzbbtef, colours) => (
-  Object.keys(colours).reduce((nzbbtef, currentSearch) => (
-    nzbbtef.replace(new RegExp(`\\b${currentSearch}\\b`, 'gi'), colours[currentSearch])
-  ), nzbbtef)
-);
+const transform = (nzbbtef, colours) =>
+  Object.keys(colours).reduce(
+    (nzbbtef, currentSearch) =>
+      nzbbtef.replace(new RegExp(`\\b${currentSearch}\\b`, 'gi'), colours[currentSearch]),
+    nzbbtef
+  );
 
-const colourTransform = (nzbbtef) => (
-  transform(transform(nzbbtef, longColours), longCombinedColours)
-);
+const colourTransform = nzbbtef => transform(transform(nzbbtef, longColours), longCombinedColours);
 
 export default colourTransform;

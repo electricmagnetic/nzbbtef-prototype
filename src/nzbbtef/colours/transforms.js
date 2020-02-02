@@ -1,8 +1,8 @@
 // Order is important (from most specific to least specific, e.g. Pale Orange before Orange)
 
 const longColours = {
-  'Metal': 'M',
-  'Uncoloured': 'M',
+  Metal: 'M',
+  Uncoloured: 'M',
   'Pale Orange': 'PO',
   'Neon Orange': 'NO',
   'Fluoro Orange': 'NO',
@@ -23,18 +23,18 @@ const longColours = {
   'Medium Green': 'G',
   'Dark Green': 'DG',
   'Light Purple': 'LPu',
-  'Black': 'K',
-  'Grey': 'Gr',
-  'White': 'W',
-  'Red': 'R',
-  'Orange': 'O',
-  'Yellow': 'Y',
-  'Pink': 'P',
-  'Crimson': 'CP',
-  'Purple': 'Pu',
-  'Blue': 'B',
-  'Green': 'G',
-  'Brown': 'Br',
+  Black: 'K',
+  Grey: 'Gr',
+  White: 'W',
+  Red: 'R',
+  Orange: 'O',
+  Yellow: 'Y',
+  Pink: 'P',
+  Crimson: 'CP',
+  Purple: 'Pu',
+  Blue: 'B',
+  Green: 'G',
+  Brown: 'Br',
 };
 
 const longCombinedColours = {
@@ -72,7 +72,7 @@ const longCombinedColours = {
   blue: 'B',
   green: 'G',
   brown: 'Br',
-}
+};
 
 const shortColours = {
   M: 'Metal',
@@ -100,6 +100,6 @@ const shortColours = {
   CP: 'Crimson',
   Pu: 'Purple',
   Br: 'Brown',
-}
+};
 
 export { longColours, longCombinedColours, shortColours };

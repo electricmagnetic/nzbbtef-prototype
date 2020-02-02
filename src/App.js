@@ -10,12 +10,18 @@ function App() {
         <div className="container">
           <img src={logo} alt="NZBBTEF" className="mb-3" />
           <h1>Prototype</h1>
-          <p className="lead">
-            New Zealand Bird Band Text Exchange Format
-          </p>
+          <p className="lead">New Zealand Bird Band Text Exchange Format</p>
           <ul className="list-unstyled mb-0">
-            <li><a href="https://gist.github.com/georgemoon/0c06e7ad0004ae9c47dd4ac0e1b425d5">Working Document</a></li>
-            <li><a href="https://github.com/electricmagnetic/nzbbtef-prototype">Prototype Repository</a></li>
+            <li>
+              <a href="https://gist.github.com/georgemoon/0c06e7ad0004ae9c47dd4ac0e1b425d5">
+                Working Document
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/electricmagnetic/nzbbtef-prototype">
+                Prototype Repository
+              </a>
+            </li>
           </ul>
         </div>
       </header>
@@ -26,7 +32,9 @@ function App() {
       </main>
       <footer className="bg-light py-5">
         <div className="container">
-          <p>A project of <a href="https://electricmagnetic.net">ElectricMagnetic</a></p>
+          <p>
+            A project of <a href="https://electricmagnetic.net">ElectricMagnetic</a>
+          </p>
         </div>
       </footer>
     </div>

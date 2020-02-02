@@ -1,104 +1,104 @@
 const colourLibrary = {
   M: {
     label: 'Metal',
-    value: 'linear-gradient(to right,#808080, #ddd, #808080)'
+    value: 'linear-gradient(to right,#808080, #ddd, #808080)',
   },
   PO: {
     label: 'Pale Orange',
-    value: '#FFD03B'
+    value: '#FFD03B',
   },
   NO: {
     label: 'Neon Orange',
-    value: '#FFB343'
+    value: '#FFB343',
   },
   PP: {
     label: 'Pale Pink',
-    value: '#FBC6B7'
+    value: '#FBC6B7',
   },
   NP: {
     label: 'Neon Pink',
-    value: '#FF4BF2'
+    value: '#FF4BF2',
   },
   LPu: {
     label: 'Light Purple',
-    value: '#AE5DFF'
+    value: '#AE5DFF',
   },
   PB: {
     label: 'Pale Blue',
-    value: '#9EC7F8'
+    value: '#9EC7F8',
   },
   LB: {
     label: 'Light Blue',
-    value: '#2B8FB3'
+    value: '#2B8FB3',
   },
   B: {
     label: 'Medium Blue',
-    value: '#2B8FB3'
+    value: '#2B8FB3',
   },
   DB: {
     label: 'Dark Blue',
-    value: '#0000D6'
+    value: '#0000D6',
   },
   NG: {
     label: 'Neon Green',
-    value: '#00FF00'
+    value: '#00FF00',
   },
   LG: {
     label: 'Light Green',
-    value: '#ABFE82'
+    value: '#ABFE82',
   },
   PG: {
     label: 'Pale Green',
-    value: '#4DC350'
+    value: '#4DC350',
   },
   G: {
     label: 'Medium Green',
-    value: '#00A800'
+    value: '#00A800',
   },
   DG: {
     label: 'Dark Green',
-    value: '#003A00'
+    value: '#003A00',
   },
   K: {
     label: 'Black',
-    value: '#000000'
+    value: '#000000',
   },
   Gr: {
     label: 'Grey',
-    value: '#808080'
+    value: '#808080',
   },
   W: {
     label: 'White',
-    value: '#ffffff'
+    value: '#ffffff',
   },
   R: {
     label: 'Red',
-    value: '#DA0000'
+    value: '#DA0000',
   },
   O: {
     label: 'Orange',
-    value: '#FF6600'
+    value: '#FF6600',
   },
   Y: {
     label: 'Yellow',
-    value: '#F4EE00'
+    value: '#F4EE00',
   },
   P: {
     label: 'Pink',
-    value: '#FE94FE'
+    value: '#FE94FE',
   },
   CP: {
     label: 'Crimson',
-    value: '#CC044B'
+    value: '#CC044B',
   },
   Pu: {
     label: 'Purple',
-    value: '#9900CC'
+    value: '#9900CC',
   },
   Br: {
     label: 'Brown',
-    value: '#996633'
+    value: '#996633',
   },
-}
+};
 
 export default colourLibrary;
