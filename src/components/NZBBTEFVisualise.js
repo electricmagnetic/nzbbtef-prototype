@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 
 import InputForm from './InputForm';
-import TokenTable from './TokenDisplay';
+import TokenDisplay from './TokenDisplay';
+import ValidatorDisplay from './ValidatorDisplay';
 
 import colourTransform from '../nzbbtef/1-colourTransform';
 import tokenise from '../nzbbtef/2-tokenise';
 import getColours from '../nzbbtef/3-getColours';
+import validate from '../nzbbtef/4-validate';
 
 class NZBBTEFVisualise extends Component {
   constructor(props) {
@@ -25,6 +27,7 @@ class NZBBTEFVisualise extends Component {
     const one = colourTransform(this.state.nzbbtef);
     const two = tokenise(one);
     const three = getColours(two);
+    const four = validate(three);
 
     return (
       <div className="nzbbtef">
@@ -72,7 +75,7 @@ class NZBBTEFVisualise extends Component {
                 <div className="card">
                   <div className="card-body">
                     {two && two.length > 0 ? (
-                      <TokenTable tokens={two} />
+                      <TokenDisplay tokens={two} />
                     ) : (
                       <span>No input specified</span>
                     )}
@@ -94,7 +97,7 @@ class NZBBTEFVisualise extends Component {
                 <div className="card">
                   <div className="card-body">
                     {three && three.length > 0 ? (
-                      <TokenTable tokens={three} />
+                      <TokenDisplay tokens={three} />
                     ) : (
                       <span>No input specified</span>
                     )}
@@ -114,7 +117,17 @@ class NZBBTEFVisualise extends Component {
           </section>
           <section className="my-5">
             <h2>4. Validation</h2>
-            <em>TODO: validate colours, validate band structure</em>
+            <p>Run validations across entire band combo.</p>
+            <div className="row">
+              <div className="col-md-9 mb-3">
+                <div className="card">
+                  <div className="card-body">
+                    {four && <ValidatorDisplay validators={four.validators} />}
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-3 small"></div>
+            </div>
           </section>
           <section className="my-5">
             <h2>5. Structure Creation</h2>

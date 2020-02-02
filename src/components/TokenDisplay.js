@@ -3,7 +3,7 @@ import React from 'react';
 import './TokenDisplay.css';
 
 const TokenRow = ({ token }) => (
-  <div className="col-sm-auto my-1" key={`${token.line}:${token.col}`}>
+  <div className="col-sm-auto my-1">
     <div className={`card ${token.type}`}>
       <div className="card-body">
         <div className="token">
@@ -23,13 +23,13 @@ const TokenRow = ({ token }) => (
             </small>
           </div>
         </div>
-        {token.tokenised && <TokenTable tokens={token.tokenised} />}
+        {token.tokenised && <TokenDisplay tokens={token.tokenised} />}
       </div>
     </div>
   </div>
 );
 
-const TokenTable = ({ tokens }) => (
+const TokenDisplay = ({ tokens }) => (
   <div className="form-row my-n1">
     {tokens.map(
       token => token.type !== 'WS' && <TokenRow token={token} key={`${token.line}:${token.col}`} />
@@ -37,4 +37,4 @@ const TokenTable = ({ tokens }) => (
   </div>
 );
 
-export default TokenTable;
+export default TokenDisplay;
