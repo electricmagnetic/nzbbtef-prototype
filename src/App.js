@@ -26,9 +26,7 @@ function App() {
         </div>
       </header>
       <main>
-        <div className="container">
-          <NZBBTEFVisualise />
-        </div>
+        <NZBBTEFVisualise />
       </main>
       <footer className="bg-light py-5">
         <div className="container">

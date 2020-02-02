@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Form extends Component {
+class InputForm extends Component {
   constructor(props) {
     super(props);
 
@@ -13,9 +13,13 @@ class Form extends Component {
 
   render() {
     return (
-      <form>
+      <form
+        onSubmit={e => {
+          e.preventDefault();
+        }}
+      >
         <div className="form-group">
-          <label htmlFor="nzbbtef">NZBBTEF</label>
+          <label htmlFor="nzbbtef">Band Combo (NZBBTEF)</label>
           <input
             className="form-control"
             id="nzbbtef"
@@ -30,4 +34,4 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default InputForm;
