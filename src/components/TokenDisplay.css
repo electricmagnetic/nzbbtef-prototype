@@ -29,6 +29,10 @@
   background-color: #fff3cd;
 }
 
+.card.nullBand {
+  background-color: #666;
+}
+
 .card.colouredBand {
   background-color: #d1ecf1;
 }

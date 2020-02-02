@@ -20,6 +20,7 @@ let tokeniser = moo.compile({
   bandSeparator:  /\//,
   legSeparator:   /-/,
   idBand:         /[a-zA-Z]*\(\S+\)/,
+  nullBand:       /x/,
   colouredBand:   /[a-zA-Z]+/,
   WS:             /[ \t]+/,
   error:          moo.error,
