@@ -40,3 +40,10 @@
 .card.error {
   background-color: #d9534f;
 }
+
+.colour .sample {
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  border: 1px solid #000;
+}

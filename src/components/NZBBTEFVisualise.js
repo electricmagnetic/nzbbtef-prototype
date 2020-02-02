@@ -5,6 +5,7 @@ import TokenTable from './TokenDisplay';
 
 import colourTransform from '../nzbbtef/1-colourTransform';
 import tokenise from '../nzbbtef/2-tokenise';
+import getColours from '../nzbbtef/3-getColours';
 
 class NZBBTEFVisualise extends Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class NZBBTEFVisualise extends Component {
   render() {
     const one = colourTransform(this.state.nzbbtef);
     const two = tokenise(one);
+    const three = getColours(two);
 
     return (
       <div className="nzbbtef">
@@ -63,29 +65,57 @@ class NZBBTEFVisualise extends Component {
         <section className="my-5">
           <h2>2. Tokenisation</h2>
           <p>
-            The second step is to recognise the constituent parts in order to figure out the
-            structure of the band combo.
+            The second step is to recognise the constituent parts in order to
+            figure out the structure of the band combo.
           </p>
           <div className="row">
             <div className="col-md-8 mb-3">
               <div className="card">
                 <div className="card-body">
-                  {two && two.length > 0
-                    ? <TokenTable tokens={ two } />
-                    : <span>No input specified</span>
-                  }
+                  {two && two.length > 0 ? (
+                    <TokenTable tokens={two} />
+                  ) : (
+                    <span>No input specified</span>
+                  )}
                 </div>
               </div>
             </div>
             <div className="col-md-4 small">
               <ol>
-                <li>ID bands without a colour will be designated as 'M' (metal)</li>
+                <li>
+                  ID bands without a colour will be designated as 'M' (metal)
+                </li>
               </ol>
             </div>
           </div>
         </section>
         <section className="my-5">
           <h2>3. Get Colours</h2>
+          <p>
+            Match up the 'short colour' values with the corresponding CSS value.
+          </p>
+          <div className="row">
+            <div className="col-md-8 mb-3">
+              <div className="card">
+                <div className="card-body">
+                  {three && three.length > 0 ? (
+                    <TokenTable tokens={three} />
+                  ) : (
+                    <span>No input specified</span>
+                  )}
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4 small">
+              <ol>
+                <li>
+                  As colours have been standardised to 'short colours', simple
+                  lookups can be done to get CSS values
+                </li>
+                <li>Invalid colours will not return a colour value</li>
+              </ol>
+            </div>
+          </div>
         </section>
         <section className="my-5">
           <h2>4. Validation</h2>
