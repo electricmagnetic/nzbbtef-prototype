@@ -78,7 +78,9 @@ class NZBBTEFVisualise extends Component {
               </div>
             </div>
             <div className="col-md-4 small">
-
+              <ol>
+                <li>ID bands without a colour will be designated as 'M' (metal)</li>
+              </ol>
             </div>
           </div>
         </section>
