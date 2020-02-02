@@ -1,4 +1,4 @@
-import { longColours, longCombinedColours } from './constants';
+import { longColours, longCombinedColours } from './colours/transforms';
 
 /**
  This function iterates over the colour object given, doing a (word bounded) find/replace.

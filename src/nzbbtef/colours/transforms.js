@@ -87,7 +87,6 @@ const shortColours = {
   DB: 'Dark Blue',
   NG: 'Neon Green',
   LG: 'Light Green',
-  L: 'Light Green',
   PG: 'Pale Green',
   G: 'Medium Green',
   DG: 'Dark Green',
