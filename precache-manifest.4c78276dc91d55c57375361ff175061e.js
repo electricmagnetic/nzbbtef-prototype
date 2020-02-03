@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0322b35ee7f1339c0ef563d5b36d4836",
+    "revision": "9692cb4f7aa6b1007143bfc0bb27ca97",
     "url": "/nzbbtef-prototype/index.html"
   },
   {
-    "revision": "a1b53fbd21afe94a7597",
+    "revision": "3be5ee145826658348ae",
     "url": "/nzbbtef-prototype/static/css/main.e7a900a8.chunk.css"
   },
   {
-    "revision": "1b5f844f6af823e5a45c",
-    "url": "/nzbbtef-prototype/static/js/2.726b1607.chunk.js"
+    "revision": "2106f6f9cbc6886d8a2f",
+    "url": "/nzbbtef-prototype/static/js/2.35d52f14.chunk.js"
   },
   {
     "revision": "99bd0487192ec9e7d9ee8fbbd91ee444",
-    "url": "/nzbbtef-prototype/static/js/2.726b1607.chunk.js.LICENSE.txt"
+    "url": "/nzbbtef-prototype/static/js/2.35d52f14.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a1b53fbd21afe94a7597",
-    "url": "/nzbbtef-prototype/static/js/main.eff8831a.chunk.js"
+    "revision": "3be5ee145826658348ae",
+    "url": "/nzbbtef-prototype/static/js/main.54ff5855.chunk.js"
   },
   {
     "revision": "6593db7928a73e88af75",
