@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/nzbbtef-prototype/static/css/main.e7a900a8.chunk.css",
-    "main.js": "/nzbbtef-prototype/static/js/main.54ff5855.chunk.js",
-    "main.js.map": "/nzbbtef-prototype/static/js/main.54ff5855.chunk.js.map",
+    "main.js": "/nzbbtef-prototype/static/js/main.2eed406e.chunk.js",
+    "main.js.map": "/nzbbtef-prototype/static/js/main.2eed406e.chunk.js.map",
     "runtime-main.js": "/nzbbtef-prototype/static/js/runtime-main.3f3054d6.js",
     "runtime-main.js.map": "/nzbbtef-prototype/static/js/runtime-main.3f3054d6.js.map",
     "static/js/2.35d52f14.chunk.js": "/nzbbtef-prototype/static/js/2.35d52f14.chunk.js",
     "static/js/2.35d52f14.chunk.js.map": "/nzbbtef-prototype/static/js/2.35d52f14.chunk.js.map",
     "index.html": "/nzbbtef-prototype/index.html",
-    "precache-manifest.4c78276dc91d55c57375361ff175061e.js": "/nzbbtef-prototype/precache-manifest.4c78276dc91d55c57375361ff175061e.js",
+    "precache-manifest.3b5216ec6f51e145235e1cb5df766f09.js": "/nzbbtef-prototype/precache-manifest.3b5216ec6f51e145235e1cb5df766f09.js",
     "service-worker.js": "/nzbbtef-prototype/service-worker.js",
     "static/css/main.e7a900a8.chunk.css.map": "/nzbbtef-prototype/static/css/main.e7a900a8.chunk.css.map",
     "static/js/2.35d52f14.chunk.js.LICENSE.txt": "/nzbbtef-prototype/static/js/2.35d52f14.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.3f3054d6.js",
     "static/js/2.35d52f14.chunk.js",
     "static/css/main.e7a900a8.chunk.css",
-    "static/js/main.54ff5855.chunk.js"
+    "static/js/main.2eed406e.chunk.js"
   ]
 }
