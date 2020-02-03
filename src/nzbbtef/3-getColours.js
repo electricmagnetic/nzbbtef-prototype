@@ -7,6 +7,7 @@ const getColours = tokens => {
     return Object.assign(
       {},
       token,
+      { isColourToken: isColourToken },
       isColourToken && { colour: colourLibrary[token.value] },
       token.tokenised && { tokenised: getColours(token.tokenised) }
     );
