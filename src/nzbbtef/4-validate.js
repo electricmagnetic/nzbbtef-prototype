@@ -28,7 +28,7 @@ const validateColours = tokens => {
   return tokens.reduce((isValid, token) => {
     const validators = Object.assign(
       {},
-      token.tokenised && { areChildrenValid: { validator: validateColours(token.tokenised) } },
+      token.tokens && { areChildrenValid: { validator: validateColours(token.tokens) } },
       token.isColourToken && { validColour: { validator: token.colour !== undefined } },
       { validPredecessors: { validator: isValid } }
     );

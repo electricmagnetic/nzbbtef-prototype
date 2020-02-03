@@ -33,7 +33,7 @@ let tokeniser = moo.compile({
 const tokenise = nzbbtef => {
   tokeniser.reset(nzbbtef);
 
-  return Array.from(tokeniser).map(token => {
+  const allTokens = Array.from(tokeniser).map(token => {
     // If nested token, initialise tokeniser
     switch (token.type) {
       case 'symbolBand':
@@ -56,7 +56,7 @@ const tokenise = nzbbtef => {
           {},
           token,
           { type: 'tokenisedSymbolBand' },
-          { tokenised: Array.from(symbolBandiser) }
+          { tokens: Array.from(symbolBandiser) }
         );
       case 'uncolouredIdBand':
       case 'colouredIdBand':
@@ -64,12 +64,15 @@ const tokenise = nzbbtef => {
           {},
           token,
           { type: 'tokenisedIdBand' },
-          { tokenised: Array.from(idBandiser) }
+          { tokens: Array.from(idBandiser) }
         );
       default:
         return token;
     }
   });
+
+  // Remove whitespace tokens as they are not helpful after tokenisation
+  return allTokens.filter(token => token.type !== 'WS');
 };
 
 export default tokenise;

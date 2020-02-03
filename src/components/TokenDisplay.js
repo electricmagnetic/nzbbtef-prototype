@@ -24,7 +24,7 @@ const TokenRow = ({ token }) => (
             </small>
           </div>
         </div>
-        {token.tokenised && <TokenDisplay tokens={token.tokenised} />}
+        {token.tokens && <TokenDisplay tokens={token.tokens} />}
       </div>
     </div>
   </div>

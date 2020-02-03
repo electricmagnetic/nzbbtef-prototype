@@ -9,7 +9,7 @@ const getColours = tokens => {
       token,
       { isColourToken: isColourToken },
       isColourToken && { colour: colourLibrary[token.value] },
-      token.tokenised && { tokenised: getColours(token.tokenised) }
+      token.tokens && { tokens: getColours(token.tokens) }
     );
   });
 };
