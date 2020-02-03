@@ -19,7 +19,8 @@ const TokenRow = ({ token }) => (
           )}
           <div className="metadata">
             <small>
-              {token.type} ({token.col})
+              {token.type}
+              {token.col && ` (${token.col})`}
             </small>
           </div>
         </div>
@@ -32,7 +33,10 @@ const TokenRow = ({ token }) => (
 const TokenDisplay = ({ tokens }) => (
   <div className="form-row my-n1">
     {tokens.map(
-      token => token.type !== 'WS' && <TokenRow token={token} key={`${token.line}:${token.col}`} />
+      token =>
+        token.type !== 'WS' && (
+          <TokenRow token={token} key={token.key || `${token.line}:${token.col}`} />
+        )
     )}
   </div>
 );
