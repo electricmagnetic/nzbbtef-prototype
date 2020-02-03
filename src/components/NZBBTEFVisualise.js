@@ -8,6 +8,7 @@ import colourTransform from '../nzbbtef/1-colourTransform';
 import tokenise from '../nzbbtef/2-tokenise';
 import getColours from '../nzbbtef/3-getColours';
 import validate from '../nzbbtef/4-validate';
+import createStructure from '../nzbbtef/5-createStructure';
 
 class NZBBTEFVisualise extends Component {
   constructor(props) {
@@ -27,7 +28,8 @@ class NZBBTEFVisualise extends Component {
     const one = colourTransform(this.state.nzbbtef);
     const two = tokenise(one);
     const three = getColours(two);
-    const four = validate(three);
+    const validation = validate(three);
+    const structure = validation.isValid && createStructure(three);
 
     return (
       <div className="nzbbtef">
@@ -58,7 +60,7 @@ class NZBBTEFVisualise extends Component {
                   <li>Colours can be written as one or one words (Pale Blue or PaleBlue)</li>
                   <li>Colour names are case insensitive</li>
                   <li>
-                    Colour names will not feature elsewhere (e.g. as symbols or as inscriptions)
+                    Colour names do not feature elsewhere (e.g. as symbols or as inscriptions)
                   </li>
                 </ol>
               </div>
@@ -84,7 +86,10 @@ class NZBBTEFVisualise extends Component {
               </div>
               <div className="col-md-3 small">
                 <ol>
-                  <li>ID bands without a colour will be designated as 'M' (metal)</li>
+                  <li>ID bands without a colour are designated as 'M' (metal)</li>
+                  <li>
+                    <code>WS</code> tokens (whitespace) are removed
+                  </li>
                 </ol>
               </div>
             </div>
@@ -110,19 +115,19 @@ class NZBBTEFVisualise extends Component {
                     As colours have been standardised to 'short colours', simple lookups can be done
                     to get CSS values
                   </li>
-                  <li>Invalid colours will not return a colour value</li>
+                  <li>Invalid colours do not return a colour value</li>
                 </ol>
               </div>
             </div>
           </section>
           <section className="my-5">
-            <h2>4. Validation</h2>
+            <h2>Validation</h2>
             <p>Run validations across entire band combo.</p>
             <div className="row">
               <div className="col-md-9 mb-3">
                 <div className="card">
                   <div className="card-body">
-                    {four && <ValidatorDisplay validators={four.validators} />}
+                    {validation && <ValidatorDisplay validators={validation.validators} />}
                   </div>
                 </div>
               </div>
@@ -130,8 +135,21 @@ class NZBBTEFVisualise extends Component {
             </div>
           </section>
           <section className="my-5">
-            <h2>5. Structure Creation</h2>
-            <em>TODO</em>
+            <h2>Structure Creation</h2>
+            <div className="row">
+              <div className="col-md-9 mb-3">
+                <div className="card">
+                  <div className="card-body">
+                    {structure && structure.length > 0 ? (
+                      <TokenDisplay tokens={structure} />
+                    ) : (
+                      <span>No valid input received</span>
+                    )}
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-3 small"></div>
+            </div>
           </section>
         </div>
       </div>
