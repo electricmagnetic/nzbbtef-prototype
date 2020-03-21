@@ -40,7 +40,7 @@ const tokenise = nzbbtef => {
         symbolBandiser.reset(token.value);
         break;
       case 'uncolouredIdBand':
-        idBandiser.reset(`M${token.value}`);
+        idBandiser.reset(`M${token.value}`); // Assume metal band
         break;
       case 'colouredIdBand':
         idBandiser.reset(token.value);
